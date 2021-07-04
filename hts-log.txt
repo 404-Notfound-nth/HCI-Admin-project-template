@@ -1,0 +1,17 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sun, 04 Jul 2021 02:48:06 at https://shreethemes.in/doctris/admin/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://shreethemes.in/doctris/admin/index.html -O1 "D:\FPT University\HCI project admin template" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+02:48:43	Error: 	"Not Found" (404) at link https://shreethemes.in/doctris/admin/profile.html (from https://shreethemes.in/doctris/admin/index.html)
+02:48:47	Error: 	"Not Found" (404) at link https://shreethemes.in/doctris/admin/pharmacy-product-detail.html (from https://shreethemes.in/doctris/admin/product-detail.html)
+02:48:47	Error: 	"Not Found" (404) at link https://shreethemes.in/doctris/admin/shop-cart.html (from https://shreethemes.in/doctris/admin/checkout.html)
+02:48:47	Error: 	"Not Found" (404) at link https://shreethemes.in/doctris/admin/css/fonts/slick.eot (from https://shreethemes.in/doctris/admin/css/slick-theme.css)
+02:48:47	Error: 	"Not Found" (404) at link https://shreethemes.in/doctris/admin/css/fonts/slick.eot? (from https://shreethemes.in/doctris/admin/css/slick-theme.css)
+02:48:47	Error: 	"Not Found" (404) at link https://shreethemes.in/doctris/admin/css/fonts/slick.svg (from https://shreethemes.in/doctris/admin/css/slick-theme.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 41 seconds : 159 links scanned, 152 files written (12409226 bytes overall) [9322998 bytes received at 227390 bytes/sec], 3895208 bytes transferred using HTTP compression in 60 files, ratio 19%, 31.8 requests per connection
+(6 errors, 0 warnings, 0 messages)
