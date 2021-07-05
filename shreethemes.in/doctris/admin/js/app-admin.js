@@ -1,4 +1,4 @@
-/* Template Name: Doctris - Doctor Appointment Booking System
+/* Template Name: Doctris - Doctor Cuộc hẹn Booking System
    Author: Shreethemes
    Website: http://shreethemes.in/
    Mail: shreethemes@gmail.com

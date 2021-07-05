@@ -6,10 +6,10 @@
 <!-- Mirrored from shreethemes.in/doctris/admin/doctors.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Jul 2021 19:48:28 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Doctris - Doctor Appointment Booking System</title>
+        <title>Doctris - Doctor Cuộc hẹn Booking System</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
-        <meta name="keywords" content="Appointment, Booking, System, Dashboard, Health" />
+        <meta name="keywords" content="Cuộc hẹn, Booking, System, Bảng điều khiển, Health" />
         <meta name="author" content="Shreethemes" />
         <meta name="email" content="shreethemes@gmail.com" />
         <meta name="website" content="http://www.shreethemes.in/" />
@@ -28,9 +28,32 @@
         <!-- Icons -->
         <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
         <link href="css/remixicon.css" rel="stylesheet" type="text/css" />
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="../../../unicons.iconscout.com/release/v3.0.6/css/line.css">
         <!-- Css -->
         <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            
+             .star-active {
+            color: #FBC02D;
+            margin-top: 10px;
+            margin-bottom: 10px
+        }
+        
+        .star-active:hover {
+            color: #F9A825;
+            cursor: pointer
+        }
+        
+        .star-inactive {
+            color: #CFD8DC;
+            margin-top: 10px;
+            margin-bottom: 10px
+        }
+        .inline span{
+            display: inline-block;
+        }
+        </style>
 
     </head>
 
@@ -54,34 +77,22 @@
                     </div>
                     
                     <ul class="sidebar-menu pt-3">
-                        <li style = "margin-left : 35px"><a href="index.html">Dashboard</a></li>
-                        <li style = "margin-left : 35px"><a href="appointment.html"></i>Appointment</a></li>
+                        <li style = "margin-left : 35px"><a href="index.html">Bảng điều khiển</a></li>
+                        <li style = "margin-left : 35px"><a href="appointment.html"></i>Cuộc hẹn</a></li>
 
                         <li class="sidebar-dropdown">
                             <a href="javascript:void(0)"></i>
-                            <div style = "margin-left : 35px">Doctors</div>
+                            <div style = "margin-left : 35px">Nha khoa</div>
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
-                                    <li><a href="doctors.html">Doctors</a></li>
-                                    <li><a href="add-doctor.html">Add Doctor</a></li>
-                                    <li><a href="dr-profile.html">Profile</a></li>
+                                    <li><a href="doctors.html">Nha khoa</a></li>
+                                    <li><a href="add-doctor.html">Thêm nha khoa</a></li>
+                                    <!-- <li><a href="dr-profile.html">Profile</a></li> -->
                                 </ul>
                             </div>
                         </li>
 
-                       <li style = "margin-left : 35px"><a href="patients.html">Patients</a></li>
-
-                        <li class="sidebar-dropdown">
-                            <a href="javascript:void(0)"><div style = "margin-left : 35px">Apps</div></a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li><a href="chat.html">Chat</a></li>
-                                    <li><a href="email.html">Email</a></li>
-                                    <li><a href="calendar.html">Calendar</a></li>
-                                </ul>
-                            </div>
-                        </li>
 
                     </ul>
                     <!-- sidebar-menu  -->
@@ -119,12 +130,12 @@
                     <div class="layout-specing">
                         <div class="row">
                             <div class="col-xl-9 col-md-6">
-                                <h5 class="mb-0">Doctors</h5>
+                                <h5 class="mb-0">Nha khoa</h5>
 
                                 <nav aria-label="breadcrumb" class="d-inline-block mt-2">
                                     <ul class="breadcrumb breadcrumb-muted bg-transparent rounded mb-0 p-0">
                                         <li class="breadcrumb-item"><a href="index.html">Doctris</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Doctors</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Nha khoa</li>
                                     </ul>
                                 </nav>
                             </div><!--end col-->
@@ -134,7 +145,9 @@
                             </div><!--end col-->
                         </div><!--end row-->
                         
-                        <div class="row row-cols-xl-5">
+
+                        <span class="inline">
+                        <div class="row row-cols-xl-5 inline">
                             <div class="col-xl col-lg-4 col-md-6 mt-4">
                                 <div class="card team border-0 rounded shadow overflow-hidden">
                                     <div class="team-img position-relative">
@@ -147,13 +160,40 @@
                                         </ul>
                                     </div>
                                     <div class="card-body content text-center">
-                                        <a href="dr-profile.html" class="title text-dark h5 d-block mb-0">Thanh Hiệp</a>
-                                        <small class="text-muted speciality">Dentist</small>
+                                        <a href="bbbootstrap-snippet.html" class="title text-dark h5 d-block mb-0">Nha khoa thủ đức</a>
+                                        <small class="text-muted speciality">4.0/5 </small>
+                                        <div> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-inactive mx-1"></span>                                </div>
+                        </div>  
                                     </div>
+
                                 </div>
                             </div><!--end col-->
-                            
+
+
+                            <div class="row row-cols-xl-5 inline">
                             <div class="col-xl col-lg-4 col-md-6 mt-4">
+                                <div class="card team border-0 rounded shadow overflow-hidden">
+                                    <div class="team-img position-relative">
+                                        <img src="images/ava.png" class="img-fluid" alt="">
+                                        <ul class="list-unstyled team-social mb-0">
+                                            <li><a href="#" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="facebook" class="icons"></i></a></li>
+                                            <li class="mt-2"><a href="#" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="linkedin" class="icons"></i></a></li>
+                                            <li class="mt-2"><a href="#" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="instagram" class="icons"></i></a></li>
+                                            <li class="mt-2"><a href="#" class="btn btn-icon btn-pills btn-soft-primary"><i data-feather="twitter" class="icons"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body content text-center">
+                                        <a href="bbbootstrap-snippet.html" class="title text-dark h5 d-block mb-0">Nha khoa thủ đức</a>
+                                        <small class="text-muted speciality">4.0/5 </small>
+                                        <div> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-active mx-1"></span> <span class="fa fa-star star-inactive mx-1"></span>                                </div>
+                        </div>  
+                                    </div>
+
+                                </div>
+                            </div>
+                        </span>
+                            
+<!--                             <div class="col-xl col-lg-4 col-md-6 mt-4">
                                 <div class="card team border-0 rounded shadow overflow-hidden">
                                     <div class="team-img position-relative">
                                         <img src="images/ava.png" class="img-fluid" alt="">
@@ -169,8 +209,7 @@
                                         <small class="text-muted speciality">Dentist</small>
                                     </div>
                                 </div>
-                            </div><!--end col-->
-                            
+                            </div><!--end col-->                        
                            
                             </div><!--end col-->
                         </div><!--end row-->
@@ -193,7 +232,7 @@
         <script src="js/feather.min.js"></script>
         <!-- Main Js -->
         <script src="js/app-admin.js"></script>
-        
+            <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     </body>
 
 
