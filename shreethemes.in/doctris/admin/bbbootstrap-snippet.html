@@ -356,84 +356,490 @@
         <div class="tab-pane fade pt-4" id="nav-service" role="tabpanel" aria-labelledby="nav-service-tab">
             <div class="row pb-4" style="float: right">
                 <div class="px-2">
-                    <a href="" class="btn btn-primary">Thêm dịch vụ</a>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAddService">
+                        Thêm dịch vụ
+                    </button>
                 </div>
-                <div class="pr-3 pl-2">
-                    <a href="" class="btn btn-danger"  onclick="return confirm('Bạn có muốn xóa nha khoa này không?');">Xóa dịch vụ</a>
+
+                <!-- Modal start -->
+                <div class="modal fade" id="modalAddService" tabindex="-1" role="dialog" aria-labelledby="modalTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitle">Thêm dịch vụ</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Hình</label>
+                                        <input type="file" accept="image/*" class="form-control-file" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Dịch vụ</label>
+                                        <input type="text" class="form-control" maxlength="50" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Giá tiền (VND)</label>
+                                        <input type="number" class="form-control" />
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
+                                <button type="button" class="btn btn-primary">Thêm dịch vụ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal end -->
+
+                <div class="pr-4 pl-2">
+                    <a href="" class="btn btn-danger"
+                        onclick="return confirm('Bạn có muốn xóa nha khoa này không?');">Xóa dịch vụ</a>
                 </div>
             </div>
 
             <table class="table table-hover">
                 <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col"></th>
-                    <th scope="col">Dịch vụ</th>
-                    <th scope="col">Giá</th>
-                    <th scope="col"></th>
-                  </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col"></th>
+                        <th scope="col">Dịch vụ</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col"></th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row"><input type="checkbox" id="rang-su"></th>
-                    <td><img id="rang-su" src="images/service/icon-boc-rang-su-1.png" width="100px"></td>
-                    <td>Bọc răng sứ</td>
-                    <td>2.000.000 VND</td>
-                    <td><a href="" class="btn btn-warning">Cập nhật dịch vụ</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><input type="checkbox" id="implant"></th>
-                    <td><img id="implant" src="images/service/cay-ghep-implant.jpg" width="100px"></td>
-                    <td>Cấy ghép implant</td>
-                    <td>11.750.000 VND</td>
-                    <td><a href="" class="btn btn-warning">Cập nhật dịch vụ</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><input type="checkbox" id="nieng-rang-tham-mi"></th>
-                    <td><img id="nieng-rang-tham-mi" src="images/service/nieng-rang-tham-my.png" width="100px"></td>
-                    <td>Niềng răng thẩm mỹ</td>
-                    <td>18.000.000 VND</td>
-                    <td><a href="" class="btn btn-warning">Cập nhật dịch vụ</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><input type="checkbox" id="veneer"></th>
-                    <td><img id="veneer" src="images/service/rang-su-veneer.png" width="100px"></td>
-                    <td>Mặt dán sứ Veneer</td>
-                    <td>8.000.000 VND</td>
-                    <td><a href="" class="btn btn-warning">Cập nhật dịch vụ</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><input type="checkbox" id="tay-trang-rang"></th>
-                    <td><img id="tay-trang-rang" src="images/service/icon-tay-trang-rang-1.png" width="100px"></td>
-                    <td>Tẩy trắng răng</td>
-                    <td>200.000 VND</td>
-                    <td><a href="" class="btn btn-warning">Cập nhật dịch vụ</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><input type="checkbox" id="nho-rang-khon"></th>
-                    <td><img id="nho-rang-khon" src="images/service/icon-nho-rang-khon-1.png" width="100px"></td>
-                    <td>Nhổ răng khôn</td>
-                    <td>1.000.000 VND</td>
-                    <td><a href="" class="btn btn-warning">Cập nhật dịch vụ</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><input type="checkbox" id="benh-nha-chu"></th>
-                    <td><img id="benh-nha-chu" src="images/service/icon-benh-ly-nha-chu.png" width="100px"></td>
-                    <td>Bệnh lý nha chu</td>
-                    <td>700.000 VND</td>
-                    <td><a href="" class="btn btn-warning">Cập nhật dịch vụ</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><input type="checkbox" id="dieu-tri-tuy"></th>
-                    <td><img id="dieu-tri-tuy" src="images/service/dieu-tri-tuy.png" width="100px"></th>
-                    <td>Điều trị tủy</td>
-                    <td>1.500.000 VND</td>
-                    <td><a href="" class="btn btn-warning">Cập nhật dịch vụ</a></td>
-                  </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" id="rang-su"></th>
+                        <td><img id="rang-su" src="images/service/icon-boc-rang-su-1.png" width="100px"></td>
+                        <td>Bọc răng sứ</td>
+                        <td>2.000.000 VND</td>
+                        <td> <button type="button" class="btn btn-warning" data-toggle="modal"
+                                data-target="#modalUpdateService1">
+                                Cập nhật dịch vụ
+                            </button></td>
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalUpdateService1" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Hình</label> <br /> <br />
+                                                <img id="rang-su" src="images/service/icon-boc-rang-su-1.png"
+                                                    width="100px"><br />
+                                                <input type="file" accept="image/*" class="form-control-file" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Bọc răng sứ" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="2.000.000" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><input type="checkbox" id="implant"></th>
+                        <td><img id="implant" src="images/service/cay-ghep-implant.jpg" width="100px"></td>
+                        <td>Cấy ghép implant</td>
+                        <td>11.750.000 VND</td>
+                        <td> <button type="button" class="btn btn-warning" data-toggle="modal"
+                                data-target="#modalUpdateService2">
+                                Cập nhật dịch vụ
+                            </button></td>
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalUpdateService2" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Hình</label><br /> <br />
+                                                <img id="rang-su" src="images/service/cay-ghep-implant.jpg"
+                                                    width="100px"><br />
+                                                <input type="file" accept="image/*" class="form-control-file" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Cấy ghép implant" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="11.750.000" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><input type="checkbox" id="nieng-rang-tham-mi"></th>
+                        <td><img id="nieng-rang-tham-mi" src="images/service/nieng-rang-tham-my.png" width="100px"></td>
+                        <td>Niềng răng thẩm mỹ</td>
+                        <td>18.000.000 VND</td>
+                        <td> <button type="button" class="btn btn-warning" data-toggle="modal"
+                                data-target="#modalUpdateService3">
+                                Cập nhật dịch vụ
+                            </button></td>
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalUpdateService3" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Hình</label> <br /> <br />
+                                                <img id="rang-su" src="images/service/nieng-rang-tham-my.png"
+                                                    width="100px"><br />
+                                                <input type="file" accept="image/*" class="form-control-file" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Niềng răng thẩm mỹ" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="18.000.000" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><input type="checkbox" id="veneer"></th>
+                        <td><img id="veneer" src="images/service/rang-su-veneer.png" width="100px"></td>
+                        <td>Mặt dán sứ Veneer</td>
+                        <td>8.000.000 VND</td>
+                        <td> <button type="button" class="btn btn-warning" data-toggle="modal"
+                                data-target="#modalUpdateService4">
+                                Cập nhật dịch vụ
+                            </button></td>
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalUpdateService4" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Hình</label><br /> <br />
+                                                <img id="rang-su" src="images/service/rang-su-veneer.png"
+                                                    width="100px"><br />
+                                                <input type="file" accept="image/*" class="form-control-file" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Mặt dán sứ Veneer" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="8.000.000" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><input type="checkbox" id="tay-trang-rang"></th>
+                        <td><img id="tay-trang-rang" src="images/service/icon-tay-trang-rang-1.png" width="100px"></td>
+                        <td>Tẩy trắng răng</td>
+                        <td>200.000 VND</td>
+                        <td> <button type="button" class="btn btn-warning" data-toggle="modal"
+                                data-target="#modalUpdateService5">
+                                Cập nhật dịch vụ
+                            </button></td>
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalUpdateService5" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Hình</label> <br /> <br />
+                                                <img id="rang-su" src="images/service/icon-tay-trang-rang-1.png"
+                                                    width="100px"><br />
+                                                <input type="file" accept="image/*" class="form-control-file" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Tẩy trắng răng" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="200.000" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" id="nho-rang-khon"></th>
+                        <td><img id="nho-rang-khon" src="images/service/icon-nho-rang-khon-1.png" width="100px"></td>
+                        <td>Nhổ răng khôn</td>
+                        <td>1.000.000 VND</td>
+                        <td> <button type="button" class="btn btn-warning" data-toggle="modal"
+                                data-target="#modalUpdateService6">
+                                Cập nhật dịch vụ
+                            </button></td>
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalUpdateService6" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Hình</label> <br /> <br />
+                                                <img id="rang-su" src="images/service/icon-nho-rang-khon-1.png"
+                                                    width="100px"><br />
+                                                <input type="file" accept="image/*" class="form-control-file" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Nhổ răng khôn" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="1.000.000" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" id="benh-nha-chu"></th>
+                        <td><img id="benh-nha-chu" src="images/service/icon-benh-ly-nha-chu.png" width="100px"></td>
+                        <td>Bệnh lý nha chu</td>
+                        <td>700.000 VND</td>
+                        <td> <button type="button" class="btn btn-warning" data-toggle="modal"
+                                data-target="#modalUpdateService7">
+                                Cập nhật dịch vụ
+                            </button></td>
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalUpdateService7" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Hình</label> <br /> <br />
+                                                <img id="rang-su" src="images/service/icon-benh-ly-nha-chu.png"
+                                                    width="100px"><br />
+                                                <input type="file" accept="image/*" class="form-control-file" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Bệnh lý nha chur" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="700.000" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
+                    </tr>
+                    <tr>
+                        <th scope="row"><input type="checkbox" id="dieu-tri-tuy"></th>
+                        <td><img id="dieu-tri-tuy" src="images/service/dieu-tri-tuy.png" width="100px"></th>
+                        <td>Điều trị tủy</td>
+                        <td>1.500.000 VND</td>
+                        <td> <button type="button" class="btn btn-warning" data-toggle="modal"
+                                data-target="#modalUpdateService8">
+                                Cập nhật dịch vụ
+                            </button></td>
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalUpdateService8" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Hình</label> <br /> <br />
+                                                <img id="rang-su" src="images/service/dieu-tri-tuy.png"
+                                                    width="100px"><br />
+                                                <input type="file" accept="image/*" class="form-control-file" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Điều trị tủy" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="1.500.000" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
+                    </tr>
                 </tbody>
-              </table>
+            </table>
         </div>
-         <!-- nav-service end -->
+        <!-- nav-service end -->
     </div>
 
 
