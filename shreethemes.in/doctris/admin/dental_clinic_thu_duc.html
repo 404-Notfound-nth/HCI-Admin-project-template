@@ -160,14 +160,15 @@
 <body>
     <!-- Navbar Start -->
     <nav>
-        <div class="nav nav-tabs sticky-top navbar-light" id="nav-tab" role="tablist" style="background-color: #e3f2fd;">
+        <div class="nav nav-tabs sticky-top navbar-light" id="nav-tab" role="tablist"
+            style="background-color: #e3f2fd;">
             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
                 aria-controls="nav-home" aria-selected="true">Trang chủ</a>
             <a class="nav-item nav-link" id="nav-service-tab" data-toggle="tab" href="#nav-service" role="tab"
                 aria-controls="nav-service" aria-selected="false">Dịch vụ</a>
             <a class="nav-item nav-link" id="nav-appoinment-tab" data-toggle="tab" href="#nav-appoinment" role="tab"
                 aria-controls="nav-appoinment" aria-selected="false">Lịch hẹn</a>
-            <a class="nav-item nav-link" id="nav-discount-tab" data-toggle="tab" href="#nav-discount" role="tab"
+                <a class="nav-item nav-link" id="nav-discount-tab" data-toggle="tab" href="#nav-discount" role="tab"
                 aria-controls="nav-discount" aria-selected="false">Ưu đãi</a>
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -175,7 +176,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="update_dental_clinic_thu_duc.html">Chỉnh sửa thông tin</a>
-                <a class="dropdown-item" href="login.html">Đăng xuất</a>    
+                <a class="dropdown-item" href="login.html">Đăng xuất</a>
             </div>
         </div>
     </nav>
@@ -378,6 +379,14 @@
         </div>
         <!-- nav-service start -->
         <div class="tab-pane fade pt-4" id="nav-service" role="tabpanel" aria-labelledby="nav-service-tab">
+            <!-- search dịch vụ -->
+            <div class="row ml-5" style="float: left;">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Tên dịch vụ" aria-label="Search">
+                    <button class="btn btn-outline-success ml-3 my-2 my-sm-0" type="">Tìm kiếm</button>
+                </form>
+            </div>
+
             <div class="row pb-4" style="float: right">
                 <div class="px-2">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAddService">
@@ -437,6 +446,7 @@
                         <th scope="col">Dịch vụ</th>
                         <th scope="col">Giá</th>
                         <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -448,6 +458,10 @@
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService1">
                                 Cập nhật dịch vụ
+                            </button></td>
+                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAddDiscount1">
+                                Thêm ưu đãi
                             </button></td>
 
                         <!-- Modal start -->
@@ -501,6 +515,10 @@
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService2">
                                 Cập nhật dịch vụ
+                            </button></td>
+                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAddDiscount2">
+                                Thêm ưu đãi
                             </button></td>
 
                         <!-- Modal start -->
@@ -556,6 +574,10 @@
                                 data-target="#modalUpdateService3">
                                 Cập nhật dịch vụ
                             </button></td>
+                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAddDiscount3">
+                                Thêm ưu đãi
+                            </button></td>
 
                         <!-- Modal start -->
                         <div class="modal fade" id="modalUpdateService3" tabindex="-1" role="dialog"
@@ -608,6 +630,10 @@
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService4">
                                 Cập nhật dịch vụ
+                            </button></td>
+                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAddDiscount4">
+                                Thêm ưu đãi
                             </button></td>
 
                         <!-- Modal start -->
@@ -663,6 +689,10 @@
                                 data-target="#modalUpdateService5">
                                 Cập nhật dịch vụ
                             </button></td>
+                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAddDiscount5">
+                                Thêm ưu đãi
+                            </button></td>
 
                         <!-- Modal start -->
                         <div class="modal fade" id="modalUpdateService5" tabindex="-1" role="dialog"
@@ -716,6 +746,10 @@
                                 data-target="#modalUpdateService6">
                                 Cập nhật dịch vụ
                             </button></td>
+                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAddDiscount6">
+                                Thêm ưu đãi
+                            </button></td>
 
                         <!-- Modal start -->
                         <div class="modal fade" id="modalUpdateService6" tabindex="-1" role="dialog"
@@ -767,6 +801,10 @@
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService7">
                                 Cập nhật dịch vụ
+                            </button></td>
+                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAddDiscount7">
+                                Thêm ưu đãi
                             </button></td>
 
                         <!-- Modal start -->
@@ -820,6 +858,10 @@
                                 data-target="#modalUpdateService8">
                                 Cập nhật dịch vụ
                             </button></td>
+                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAddDiscount8">
+                                Thêm ưu đãi
+                            </button></td>
 
                         <!-- Modal start -->
                         <div class="modal fade" id="modalUpdateService8" tabindex="-1" role="dialog"
@@ -869,11 +911,13 @@
         <!-- nav-service end -->
 
         <!-- nav-appointment start -->
-        <div class="tab-pane fade show active" id="nav-appoinment" role="tabpanel" aria-labelledby="nav-appoinment-tab">  ... </div>
-         <!-- nav-appointment end -->
+        <div class="tab-pane fade show active" id="nav-appoinment" role="tabpanel" aria-labelledby="nav-appoinment-tab">
+            ... </div>
+        <!-- nav-appointment end -->
 
-         <!-- nav-discount start -->
-        <div class="tab-pane fade show active" id="nav-discount" role="tabpanel" aria-labelledby="nav-discount-tab"> ... </div>
+        <!-- nav-discount start -->
+        <div class="tab-pane fade show active" id="nav-discount" role="tabpanel" aria-labelledby="nav-discount-tab">
+            ... </div>
         <!-- nav-discount end -->
     </div>
 
