@@ -10,6 +10,14 @@
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' rel='stylesheet'>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script>
+        var price = document.getElementById('price');
+        var e = document.getElementById('percents');
+        var percent = e.value;
+        function discount(price, percent) {
+            return price * percent;
+        }
+    </script>
     <style>
         body {
             /* background-image: linear-gradient(#4A148C, #E53935); */
@@ -154,9 +162,10 @@
         .inline p {
             display: inline-block;
         }
+
         td {
-    border: none;
-}
+            border: none;
+        }
     </style>
 </head>
 
@@ -171,7 +180,7 @@
                 aria-controls="nav-service" aria-selected="false">Dịch vụ</a>
             <a class="nav-item nav-link" id="nav-appoinment-tab" data-toggle="tab" href="#nav-appoinment" role="tab"
                 aria-controls="nav-appoinment" aria-selected="false">Lịch hẹn</a>
-                <a class="nav-item nav-link" id="nav-discount-tab" data-toggle="tab" href="#nav-discount" role="tab"
+            <a class="nav-item nav-link" id="nav-discount-tab" data-toggle="tab" href="#nav-discount" role="tab"
                 aria-controls="nav-discount" aria-selected="false">Ưu đãi</a>
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -437,7 +446,7 @@
 
                 <div class="pr-4 pl-2">
                     <a href="" class="btn btn-danger"
-                        onclick="return confirm('Bạn có muốn xóa nha khoa này không?');">Xóa dịch vụ</a>
+                        onclick="return confirm('Bạn có muốn xóa dịch vụ này không?');">Xóa dịch vụ</a>
                 </div>
             </div>
 
@@ -448,6 +457,8 @@
                         <th scope="col"></th>
                         <th scope="col">Dịch vụ</th>
                         <th scope="col">Giá</th>
+                        <th scope="col">Ưu đãi</th>
+                        <th scope="col"></th>
                         <th scope="col"></th>
                         <th scope="col"></th>
                         <th scope="col"></th>
@@ -459,14 +470,80 @@
                         <td><img id="rang-su" src="images/service/icon-boc-rang-su-1.png" width="100px"></td>
                         <td>Bọc răng sứ</td>
                         <td>2.000.000 VND</td>
+                        <td>Đang ưu đãi</td>
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService1">
                                 Cập nhật dịch vụ
                             </button></td>
-                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#modalAddDiscount1">
                                 Thêm ưu đãi
                             </button></td>
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalViewDiscount1">
+                                Xem ưu đãi
+                            </button></td>
+
+                        <div class="modal fade" id="modalViewDiscount1" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Thêm ưu đãi</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Bọc răng sứ" readonly="true" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="2.000.000" id="price"
+                                                    readonly="true" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="percents">Số phầm trăm giảm</label>
+                                                <select name="percents" id="percents">
+                                                    <option value="0.1">10%</option>
+                                                    <option value="0.2">20%</option>
+                                                    <option value="0.3">30%</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá được giảm</label>
+                                                <input type="text" class="form-control" value="1.800.000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Số lượt dùng</label>
+                                                <input type="text" class="form-control" value="5000" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày bắt đầu</label>
+                                                <input type="date" class="form-control" value="2021-07-14" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày kết thúc</label>
+                                                <input type="date" class="form-control" value="2021-07-30" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Modal start -->
                         <div class="modal fade" id="modalUpdateService1" tabindex="-1" role="dialog"
@@ -509,6 +586,69 @@
                             </div>
                         </div>
                         <!-- Modal end -->
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalAddDiscount1" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Thêm ưu đãi</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Bọc răng sứ" readonly="true" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="2.000.000" id="price"
+                                                    readonly="true" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="percents">Số phầm trăm giảm</label>
+                                                <select name="percents" id="percents">
+                                                    <option value="0.1">10%</option>
+                                                    <option value="0.2">20%</option>
+                                                    <option value="0.3">30%</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá được giảm</label>
+                                                <input type="text" class="form-control" value="1.800.000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Số lượt dùng</label>
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày bắt đầu</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày kết thúc</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
                     </tr>
 
                     <tr>
@@ -516,18 +656,82 @@
                         <td><img id="implant" src="images/service/cay-ghep-implant.jpg" width="100px"></td>
                         <td>Cấy ghép implant</td>
                         <td>11.750.000 VND</td>
+                        <td>Đang ưu đãi</td>
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService2">
                                 Cập nhật dịch vụ
                             </button></td>
-                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#modalAddDiscount2">
                                 Xem ưu đãi
                             </button></td>
-                            <td>
-                                <a href="" class="btn btn-danger"
-                        onclick="return confirm('Bạn có muốn xóa nha khoa này không?');">Xóa ưu đãi</a>
-                            </td>
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalViewDiscount2">
+                                Xem Ưu đãi
+                            </button></td>
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalViewDiscount2" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật ưu đãi</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Cấy ghép implant" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="11.750.000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="percents">Số phầm trăm giảm</label>
+                                                <select name="percents" id="percents">
+                                                    <option value="0.1">10%</option>
+                                                    <option value="0.2">20%</option>
+                                                    <option value="0.3">30%</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá được giảm</label>
+                                                <input type="text" class="form-control" value="10,575,000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Số lượt dùng</label>
+                                                <input type="text" class="form-control" value="5000" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày bắt đầu</label>
+                                                <input type="date" class="form-control" value="2021-07-14" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày kết thúc</label>
+                                                <input type="date" class="form-control" value="2021-07-30" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
 
                         <!-- Modal start -->
                         <div class="modal fade" id="modalUpdateService2" tabindex="-1" role="dialog"
@@ -570,6 +774,70 @@
                             </div>
                         </div>
                         <!-- Modal end -->
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalAddDiscount2" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Cấy ghép implant" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="11.750.000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="percents">Số phầm trăm giảm</label>
+                                                <select name="percents" id="percents">
+                                                    <option value="0.1">10%</option>
+                                                    <option value="0.2">20%</option>
+                                                    <option value="0.3">30%</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá được giảm</label>
+                                                <input type="text" class="form-control" value="10,575,000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Số lượt dùng</label>
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày bắt đầu</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày kết thúc</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
+
                     </tr>
 
                     <tr>
@@ -578,14 +846,20 @@
                         </td>
                         <td>Niềng răng thẩm mỹ</td>
                         <td>18.000.000 VND</td>
+                        <td>Không ưu đãi</td>
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService3">
                                 Cập nhật dịch vụ
                             </button></td>
-                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#modalAddDiscount3">
                                 Thêm ưu đãi
                             </button></td>
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalViewDiscount1" disabled>
+                                Xem ưu đãi
+                            </button></td>
+
 
                         <!-- Modal start -->
                         <div class="modal fade" id="modalUpdateService3" tabindex="-1" role="dialog"
@@ -628,6 +902,68 @@
                             </div>
                         </div>
                         <!-- Modal end -->
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalAddDiscount3" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Niềng răng thẩm mỹ" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="18.000.000" readonly />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="percents">Số phầm trăm giảm</label>
+                                                <select name="percents" id="percents">
+                                                    <option value="0.1">10%</option>
+                                                    <option value="0.2">20%</option>
+                                                    <option value="0.3">30%</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá được giảm</label>
+                                                <input type="text" class="form-control" value="16.200.000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Số lượt dùng</label>
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày bắt đầu</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày kết thúc</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
                     </tr>
 
                     <tr>
@@ -635,13 +971,18 @@
                         <td><img id="veneer" src="images/service/rang-su-veneer.png" width="100px"></td>
                         <td>Mặt dán sứ Veneer</td>
                         <td>8.000.000 VND</td>
+                        <td>Không ưu đãi</td>
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService4">
                                 Cập nhật dịch vụ
                             </button></td>
-                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#modalAddDiscount4">
                                 Thêm ưu đãi
+                            </button></td>
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalViewDiscount1" disabled>
+                                Xem ưu đãi
                             </button></td>
 
                         <!-- Modal start -->
@@ -685,6 +1026,69 @@
                             </div>
                         </div>
                         <!-- Modal end -->
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalAddDiscount4" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Mặt dán sứ Veneer" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="8.000.000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="percents">Số phầm trăm giảm</label>
+                                                <select name="percents" id="percents">
+                                                    <option value="0.1">10%</option>
+                                                    <option value="0.2">20%</option>
+                                                    <option value="0.3">30%</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá được giảm</label>
+                                                <input type="text" class="form-control" value="7.200.000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Số lượt dùng</label>
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày bắt đầu</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày kết thúc</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
                     </tr>
 
                     <tr>
@@ -693,13 +1097,18 @@
                         </td>
                         <td>Tẩy trắng răng</td>
                         <td>200.000 VND</td>
+                        <td>Không ưu đãi</td>
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService5">
                                 Cập nhật dịch vụ
                             </button></td>
-                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#modalAddDiscount5">
                                 Thêm ưu đãi
+                            </button></td>
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalViewDiscount1" disabled>
+                                Xem ưu đãi
                             </button></td>
 
                         <!-- Modal start -->
@@ -743,6 +1152,68 @@
                             </div>
                         </div>
                         <!-- Modal end -->
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalAddDiscount5" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Tẩy trắng răng" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="200.000" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="percents">Số phầm trăm giảm</label>
+                                                <select name="percents" id="percents">
+                                                    <option value="0.1">10%</option>
+                                                    <option value="0.2">20%</option>
+                                                    <option value="0.3">30%</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá được giảm</label>
+                                                <input type="text" class="form-control" value="180.000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Số lượt dùng</label>
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày bắt đầu</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày kết thúc</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
                     </tr>
                     <tr>
                         <th scope="row"><input type="checkbox" id="nho-rang-khon"></th>
@@ -750,13 +1221,18 @@
                         </td>
                         <td>Nhổ răng khôn</td>
                         <td>1.000.000 VND</td>
+                        <td>Không ưu đãi</td>
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService6">
                                 Cập nhật dịch vụ
                             </button></td>
-                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#modalAddDiscount6">
                                 Thêm ưu đãi
+                            </button></td>
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalViewDiscount1" disabled>
+                                Xem ưu đãi
                             </button></td>
 
                         <!-- Modal start -->
@@ -800,19 +1276,86 @@
                             </div>
                         </div>
                         <!-- Modal end -->
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalAddDiscount6" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Nhổ răng khôn" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="1.000.000" readonly />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="percents">Số phầm trăm giảm</label>
+                                                <select name="percents" id="percents">
+                                                    <option value="0.1">10%</option>
+                                                    <option value="0.2">20%</option>
+                                                    <option value="0.3">30%</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá được giảm</label>
+                                                <input type="text" class="form-control" value="900.000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Số lượt dùng</label>
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày bắt đầu</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày kết thúc</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
                     </tr>
                     <tr>
                         <th scope="row"><input type="checkbox" id="benh-nha-chu"></th>
                         <td><img id="benh-nha-chu" src="images/service/icon-benh-ly-nha-chu.png" width="100px"></td>
                         <td>Bệnh lý nha chu</td>
                         <td>700.000 VND</td>
+                        <td>Không ưu đãi</td>
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService7">
                                 Cập nhật dịch vụ
                             </button></td>
-                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#modalAddDiscount7">
                                 Thêm ưu đãi
+                            </button></td>
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalViewDiscount1" disabled>
+                                Xem ưu đãi
                             </button></td>
 
                         <!-- Modal start -->
@@ -856,19 +1399,86 @@
                             </div>
                         </div>
                         <!-- Modal end -->
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalAddDiscount7" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Bệnh lý nha chu" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="700.000" readonly />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="percents">Số phầm trăm giảm</label>
+                                                <select name="percents" id="percents">
+                                                    <option value="0.1">10%</option>
+                                                    <option value="0.2">20%</option>
+                                                    <option value="0.3">30%</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá được giảm</label>
+                                                <input type="text" class="form-control" value="630.000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Số lượt dùng</label>
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày bắt đầu</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày kết thúc</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
                     </tr>
                     <tr>
                         <th scope="row"><input type="checkbox" id="dieu-tri-tuy"></th>
                         <td><img id="dieu-tri-tuy" src="images/service/dieu-tri-tuy.png" width="100px"></th>
                         <td>Điều trị tủy</td>
                         <td>1.500.000 VND</td>
+                        <td>Không ưu đãi</td>
                         <td> <button type="button" class="btn btn-warning" data-toggle="modal"
                                 data-target="#modalUpdateService8">
                                 Cập nhật dịch vụ
                             </button></td>
-                            <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#modalAddDiscount8">
                                 Thêm ưu đãi
+                            </button></td>
+                        <td> <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalViewDiscount1" disabled>
+                                Xem ưu đãi
                             </button></td>
 
                         <!-- Modal start -->
@@ -912,6 +1522,68 @@
                             </div>
                         </div>
                         <!-- Modal end -->
+
+                        <!-- Modal start -->
+                        <div class="modal fade" id="modalAddDiscount8" tabindex="-1" role="dialog"
+                            aria-labelledby="modalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitle">Cập nhật dịch vụ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Dịch vụ</label>
+                                                <input type="text" class="form-control" maxlength="50"
+                                                    value="Điều trị tủy" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Giá tiền (VND)</label>
+                                                <input type="text" class="form-control" value="1.500.000" readonly />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="percents">Số phầm trăm giảm</label>
+                                                <select name="percents" id="percents">
+                                                    <option value="0.1">10%</option>
+                                                    <option value="0.2">20%</option>
+                                                    <option value="0.3">30%</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Giá được giảm</label>
+                                                <input type="text" class="form-control" value="1.350.000" readonly />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Số lượt dùng</label>
+                                                <input type="text" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày bắt đầu</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Ngày kết thúc</label>
+                                                <input type="date" class="form-control" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy
+                                            bỏ</button>
+                                        <button type="button" class="btn btn-primary">Cập nhật dịch vụ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal end -->
                     </tr>
                 </tbody>
             </table>
@@ -920,12 +1592,12 @@
 
         <!-- nav-appointment start -->
         <div class="tab-pane fade show active" id="nav-appoinment" role="tabpanel" aria-labelledby="nav-appoinment-tab">
-            ... </div>
+        </div>
         <!-- nav-appointment end -->
 
         <!-- nav-discount start -->
         <div class="tab-pane fade show active" id="nav-discount" role="tabpanel" aria-labelledby="nav-discount-tab">
-            ... </div>
+        </div>
         <!-- nav-discount end -->
     </div>
 
