@@ -15,7 +15,7 @@
         <meta name="website" content="http://www.shreethemes.in/" />
         <meta name="Version" content="v1.0.0" />
         <!-- favicon -->
-        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="shortcut icon" href="images/logo.jpg">
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- simplebar -->
@@ -67,7 +67,7 @@
                                 </ul>
                             </div>
                         </li> -->
-                        <li style="margin-left : 35px"><a href="dental_clinic_thu_duc_homepage.html"></i>Nha khoa</a></li>
+                        <li style="margin-left : 35px"><a href="dental_clinic_thu_duc_homepage.html"></i>Trang chủ</a></li>
                         <li style="margin-left : 35px"><a href="service.html"></i>Dịch vụ</a></li>
                         <li style="margin-left : 35px"><a href="appointment.html"></i>Cuộc hẹn</a></li>
                           <li class="sidebar-dropdown">
@@ -102,8 +102,8 @@
                                 <div id="search" class="menu-search mb-0">
                                     <form role="search" method="get" id="searchform" class="searchform">
                                         <div>
-                                            <input type="text" class="border rounded-pill" name="s" id="s" placeholder="Search Keywords...">
-                                            <input type="submit" id="searchsubmit" value="Search">
+                                            <input type="text" class="border rounded-pill" name="s" id="s" placeholder="Tên, Số điện thoại">
+                                            <input type="submit" id="searchsubmit" value="Tìm kiếm">
                                         </div>
                                     </form>
                                 </div>
@@ -125,30 +125,6 @@
                                     </ul>
                                 </nav>
                             </div><!--end col-->
-
-                            <div class="col-xl-3 col-lg-6 col-md-8 mt-4 mt-md-0">
-                                <div class="justify-content-md-end">
-                                    <form>
-                                        <div class="row justify-content-between align-items-center">
-                                            <div class="col-sm-12 col-md">
-                                                <div class="mb-0 position-relative">
-                                                    <select class="form-control time-during select2input">
-                                                        <option value="EY">Today</option>
-                                                        <option value="GY">Tomorrow</option>
-                                                        <option value="PS">Yesterday</option>
-                                                    </select>
-                                                </div>
-                                            </div><!--end col-->
-                                            
-                                            <div class="col-sm-12 col-md-auto mt-4 mt-sm-0">
-                                                <div class="d-grid">
-                                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentform">+ Cuộc hẹn</a>
-                                                </div>
-                                            </div><!--end col-->
-                                        </div><!--end row-->
-                                    </form><!--end form-->
-                                </div>
-                            </div><!--end col-->
                         </div><!--end row-->
 
                         <div class="row">
@@ -158,15 +134,13 @@
                                         <thead>
                                             <tr>
                                                 <th class="border-bottom py-3" style="min-width: 50px;">#</th>
-                                                <th class="border-bottom py-3" style="min-width: 180px;">Name</th>
-                                                <th class="border-bottom py-3" style="min-width: 150px;">Email</th>
-                                                <th class="border-bottom py-3">Age</th>
-                                                <th class="border-bottom py-3">Gender</th>
-                                                <th class="border-bottom py-3" style="min-width: 150px;">Date</th>
-                                                <th class="border-bottom py-3">Time</th>
-                                                <th class="border-bottom py-3" style="min-width: 220px;">Doctor</th>
-                                                <th class="border-bottom py-3">Fees</th>
-                                                <th class="border-bottom py-3" style="min-width: 150px;"></th>
+                                                <th class="border-bottom py-3" style="min-width: 150px;">Họ và tên</th>
+                                                <th class="border-bottom py-3" style="min-width: 100px;">Số điện thoại</th>
+                                                <th class="border-bottom py-3" style="min-width: 250px;">Địa chỉ</th>
+                                                <th class="border-bottom py-3">Ngày hẹn</th>
+                                                <th class="border-bottom py-3">Giờ hẹn</th>
+                                                <!-- <th class="border-bottom py-3" style="min-width: 150px;">Dịch vụ</th> -->
+                                                <th  class="border-bottom py-3"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -180,20 +154,11 @@
                                                         </div>
                                                     </a>
                                                 </td>
-                                                <td>hiepntse140248@fpt.edu.vn</td>
-                                                <td>21</td>
-                                                <td>Nam</td>
-                                                <td>12th Jul 2020</td>
-                                                <td>11:00AM</td>
-                                                <td>
-                                                    <a href="#" class="text-dark">
-                                                        <div class="d-flex align-items-center">
-                                                            <img src="images/ava.png" class="avatar avatar-md-sm rounded-circle border shadow" alt="">
-                                                            <span class="ms-2">Dr. Thanh Hiệp</span>
-                                                        </div>
-                                                    </a>
-                                                </td>
-                                                <td>750.000 VNĐ</td>
+                                                <td>0398874156</td>
+                                                <td>123 Lê Văn Việt, p.9, TP.Thủ Đức</td>
+                                                <td>15/07/2021</td>
+                                                <td>11:00</td>
+                                                <!-- <td>Bọc răng sứ</td> -->
                                                 <td class="text-end">
                                                     <a href="#" class="btn btn-icon btn-pills btn-soft-primary" data-bs-toggle="modal" data-bs-target="#viewappointment"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     <a href="#" class="btn btn-icon btn-pills btn-soft-success" data-bs-toggle="modal" data-bs-target="#acceptappointment"><i class="fa fa-check" aria-hidden="true"></i></a>
@@ -207,24 +172,15 @@
                                                     <a href="#" class="text-dark">
                                                         <div class="d-flex align-items-center">
                                                             <img src="images/ava.png" class="avatar avatar-md-sm rounded-circle shadow" alt="">
-                                                            <span class="ms-2">Thanh Hiệp</span>
+                                                            <span class="ms-2">Thanh Long</span>
                                                         </div>
                                                     </a>
                                                 </td>
-                                               <td>hiepntse140248@fpt.edu.vn</td>
-                                                <td>21</td>
-                                                <td>Nam</td>
-                                                <td>12th Jul 2020</td>
-                                                <td>11:00AM</td>
-                                                <td>
-                                                    <a href="#" class="text-dark">
-                                                        <div class="d-flex align-items-center">
-                                                            <img src="images/ava.png" class="avatar avatar-md-sm rounded-circle border shadow" alt="">
-                                                            <span class="ms-2">Dr. Thanh Hiệp</span>
-                                                        </div>
-                                                    </a>
-                                                </td>
-                                                <td>750.000 VNĐ</td>
+                                               <td>0358999914</td>
+                                               <td>123 Phan Xích Long, p.2, q.Phú Nhuận</td>
+                                               <td>15/07/2021</td>
+                                               <td>18:00</td>
+                                               <!-- <td>Nhổ răng khôn</td> -->
                                                 <td class="text-end">
                                                     <a href="#" class="btn btn-icon btn-pills btn-soft-primary" data-bs-toggle="modal" data-bs-target="#viewappointment"><i class="fa fa-eye"></i></a>
                                                     <a href="#" class="btn btn-icon btn-pills btn-soft-success" data-bs-toggle="modal" data-bs-target="#acceptappointment"><i class="fa fa-check" aria-hidden="true"></i></a>
@@ -232,67 +188,7 @@
                                                 </td>
                                             </tr>
 
-                                            <tr>
-                                                <th>3</th>
-                                                <td class="py-3">
-                                                    <a href="#" class="text-dark">
-                                                        <div class="d-flex align-items-center">
-                                                            <img src="images/ava.png" class="avatar avatar-md-sm rounded-circle shadow" alt="">
-                                                            <span class="ms-2">Thanh Long</span>
-                                                        </div>
-                                                    </a>
-                                                </td>
-                                                <td>longptse140136@fpt.edu.vn</td>
-                                                <td>21</td>
-                                                <td>Nam</td>
-                                                <td>12th Jul 2020</td>
-                                                <td>11:00AM</td>
-                                                <td>
-                                                    <a href="#" class="text-dark">
-                                                        <div class="d-flex align-items-center">
-                                                            <img src="images/ava.png" class="avatar avatar-md-sm rounded-circle border shadow" alt="">
-                                                            <span class="ms-2">Dr.Thanh Long</span>
-                                                        </div>
-                                                    </a>
-                                                </td>
-                                                <td>750.000 VNĐ</td>
-                                                <td class="text-end">
-                                                    <a href="#" class="btn btn-icon btn-pills btn-soft-primary" data-bs-toggle="modal" data-bs-target="#viewappointment"><i class="fa fa-eye"></i></a>
-                                                    <a href="#" class="btn btn-icon btn-pills btn-soft-success" data-bs-toggle="modal" data-bs-target="#acceptappointment"><i class="fa fa-check" aria-hidden="true"></i></a>
-                                                    <a href="#" class="btn btn-icon btn-pills btn-soft-danger" data-bs-toggle="modal" data-bs-target="#cancelappointment"><i class="fa fa-ban"></i></a>
-                                                </td>
-                                            </tr>
 
-                                            <tr>
-                                                <th>4</th>
-                                                <td class="py-3">
-                                                    <a href="#" class="text-dark">
-                                                        <div class="d-flex align-items-center">
-                                                            <img src="images/ava.png" class="avatar avatar-md-sm rounded-circle shadow" alt="">
-                                                            <span class="ms-2">Thanh Long</span>
-                                                        </div>
-                                                    </a>
-                                                </td>
-                                              <td>longptse140136@fpt.edu.vn</td>
-                                                <td>21</td>
-                                                <td>Nam</td>
-                                                <td>12th Jul 2020</td>
-                                                <td>11:00AM</td>
-                                                <td>
-                                                    <a href="#" class="text-dark">
-                                                        <div class="d-flex align-items-center">
-                                                            <img src="images/ava.png" class="avatar avatar-md-sm rounded-circle border shadow" alt="">
-                                                            <span class="ms-2">Dr. Thanh Long</span>
-                                                        </div>
-                                                    </a>
-                                                </td>
-                                                <td>750.000 VNĐ</td>
-                                                <td class="text-end">
-                                                    <a href="#" class="btn btn-icon btn-pills btn-soft-primary" data-bs-toggle="modal" data-bs-target="#viewappointment"><i class="fa fa-eye"></i></a>
-                                                    <a href="#" class="btn btn-icon btn-pills btn-soft-success" data-bs-toggle="modal" data-bs-target="#acceptappointment"><i class="fa fa-check" aria-hidden="true"></i></a>
-                                                    <a href="#" class="btn btn-icon btn-pills btn-soft-danger" data-bs-toggle="modal" data-bs-target="#cancelappointment"><i class="fa fa-ban"></i></a>
-                                                </td>
-                                            </tr>
 
                                         </tbody>
                                     </table>
@@ -322,104 +218,6 @@
         <!-- page-wrapper -->
 
         <!-- Modal start -->
-        <!-- Add New Cuộc hẹn Start -->
-        <div class="modal fade" id="appointmentform" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header border-bottom p-3">
-                        <h5 class="modal-title" id="exampleModalLabel">Book an Cuộc hẹn</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body p-3 pt-4">
-                        <form>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="mb-3">
-                                        <label class="form-label">Patient Name <span class="text-danger">*</span></label>
-                                        <input name="name" id="name" type="text" class="form-control" placeholder="Patient Name :">
-                                    </div>
-                                </div><!--end col-->
-                                <!--
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">Departments</label>
-                                        <select class="form-control department-name select2input">
-                                            <option value="EY">Eye Care</option>
-                                            <option value="GY">Gynecologist</option>
-                                            <option value="PS">Psychotherapist</option>
-                                            <option value="OR">Orthopedic</option>
-                                            <option value="DE">Dentist</option>
-                                            <option value="GA">Gastrologist</option>
-                                            <option value="UR">Urologist</option>
-                                            <option value="NE">Neurologist</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                -->
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">Doctor</label>
-                                        <select class="form-control doctor-name select2input">
-                                            <option value="CA">Dr. Calvin Carlo</option>
-                                            <option value="CR">Dr. Cristino Murphy</option>
-                                            <option value="AL">Dr. Alia Reddy</option>
-                                            <option value="TO">Dr. Toni Kovar</option>
-                                            <option value="JE">Dr. Jessica McFarlane</option>
-                                            <option value="EL">Dr. Elsie Sherman</option>
-                                            <option value="BE">Dr. Bertha Magers</option>
-                                            <option value="LO">Dr. Louis Batey</option>
-                                        </select>
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">Your Email <span class="text-danger">*</span></label>
-                                        <input name="email" id="email" type="email" class="form-control" placeholder="Your email :">
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">Your Phone <span class="text-danger">*</span></label>
-                                        <input name="phone" id="phone" type="tel" class="form-control" placeholder="Your Phone :">
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label"> Date : </label>
-                                        <input name="date" type="text" class="flatpickr flatpickr-input form-control" id="checkin-date">
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label" for="input-time">Time : </label>
-                                        <input name="time" type="text" class="form-control timepicker" id="input-time" placeholder="03:30 PM">
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-12">
-                                    <div class="mb-3">
-                                        <label class="form-label">Comments <span class="text-danger">*</span></label>
-                                        <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="Your Message :"></textarea>
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-12">
-                                    <div class="d-grid">
-                                        <button type="submit" class="btn btn-primary">Đặt cuộc hẹn</button>
-                                    </div>
-                                </div><!--end col-->
-                            </div><!--end row-->
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Add New Cuộc hẹn End -->
-
         <!-- View Appintment Start -->
         <div class="modal fade" id="viewappointment" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -437,34 +235,36 @@
                             <li>
                                 <ul class="list-unstyled mb-0">
                                     <li class="d-flex">
-                                        <h6>Age:</h6>
-                                        <p class="text-muted ms-2">21 tuổi</p>
+                                        <h6>Email:</h6>
+                                        <p class="text-muted ms-2">ThanhHiep@gmail.com</p>
                                     </li>
 
                                     <li class="d-flex">
-                                        <h6>Gender:</h6>
-                                        <p class="text-muted ms-2">Nam</p>
+                                        <h6>Ngày hẹn:</h6>
+                                        <p class="text-muted ms-2">15/07/2021</p>
+                                    </li>
+
+                                    <li class="d-flex">
+                                        <h6>Giờ hẹn:</h6>
+                                        <p class="text-muted ms-2">11:00</p>
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <ul class="list-unstyled mb-0">
+                                    
                                     <li class="d-flex">
-                                        <h6>Date:</h6>
-                                        <p class="text-muted ms-2">12th Jul 2021</p>
+                                        <h6>Số điện thoại:</h6>
+                                        <p class="text-muted ms-2">0398874156</p>
                                     </li>
 
                                     <li class="d-flex">
-                                        <h6>Time:</h6>
-                                        <p class="text-muted ms-2">11:00 AM</p>
-                                    </li>
-
-                                    <li class="d-flex">
-                                        <h6 class="mb-0">Doctor:</h6>
-                                        <p class="text-muted ms-2 mb-0">Dr. Thanh Hiệp</p>
+                                        <h6>Dịch vụ:</h6>
+                                        <p class="text-muted ms-2">Bọc răng sứ</p>
                                     </li>
                                 </ul>
                             </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -476,16 +276,19 @@
         <div class="modal fade" id="acceptappointment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
+                    <div class="modal-header border-bottom p-3">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <div class="modal-body py-5">
                         <div class="text-center">
                             <div class="icon d-flex align-items-center justify-content-center bg-soft-success rounded-circle mx-auto" style="height: 95px; width:95px;">
                                 <i class="fa fa-check h1 mb-0"></i>
                             </div>
                             <div class="mt-4">
-                                <h4>Chấp nhận cuộc hẹn</h4>
-                                <p class="para-desc mx-auto text-muted mb-0">Great doctor if you need your family member to get immediate assistance, emergency treatment.</p>
+                                <h4>Chấp nhận lịch hẹn</h4>
+                                
                                 <div class="mt-4">
-                                    <a href="#" class="btn btn-soft-success">Accept</a>
+                                    <a href="#" class="btn btn-soft-success">Chấp thuận</a>
                                 </div>
                             </div>
                         </div>
@@ -499,16 +302,21 @@
         <div class="modal fade" id="cancelappointment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
+                    <div class="modal-header border-bottom p-3">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <div class="modal-body py-5">
                         <div class="text-center">
                             <div class="icon d-flex align-items-center justify-content-center bg-soft-danger rounded-circle mx-auto" style="height: 95px; width:95px;">
                                 <i class="fa fa-ban h1 mb-0"></i>
                             </div>
                             <div class="mt-4">
-                                <h4>Cancel Cuộc hẹn</h4>
-                                <p class="para-desc mx-auto text-muted mb-0">Great doctor if you need your family member to get immediate assistance, emergency treatment.</p>
+                                <h4>Từ chối lịch hẹn</h4>
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Hãy cho khách hàng biết lí do bạn từ chối lịch hẹn" rows="3"></textarea>
+                                  </div>
                                 <div class="mt-4">
-                                    <a href="#" class="btn btn-soft-danger">Cancel</a>
+                                    <a href="#" class="btn btn-soft-danger">Gửi</a>
                                 </div>
                             </div>
                         </div>
