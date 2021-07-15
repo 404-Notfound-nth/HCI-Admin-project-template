@@ -113,7 +113,8 @@
                             <div id="search" class="menu-search mb-0">
                                 <form role="search" method="get" id="searchform" class="searchform">
                                     <div>
-                                        <input type="text" class="border rounded-pill" name="s" id="s" placeholder="Tên, Số điện thoại">
+                                        <input type="text" class="border rounded-pill" name="s" id="s"
+                                            placeholder="Tên, Số điện thoại">
                                         <input type="submit" id="searchsubmit" value="Tìm kiếm">
                                     </div>
                                 </form>
@@ -128,205 +129,138 @@
                 <div class="layout-specing">
                     <div class="row">
                         <div class="col-xl-9 col-lg-6 col-md-4">
-                            <h5 class="mb-0">Quản lý bác sĩ</h5>
+                            <h5 class="mb-0">Bác sĩ</h5>
                             <nav aria-label="breadcrumb" class="d-inline-block mt-2">
-                                <!-- <ul class="breadcrumb breadcrumb-muted bg-transparent rounded mb-0 p-0">
+                                <ul class="breadcrumb breadcrumb-muted bg-transparent rounded mb-0 p-0">
                                     <li class="breadcrumb-item"><a href="">Doctris</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Cuộc hẹn</li>
-                                </ul> -->
+                                    <li class="breadcrumb-item active" aria-current="page">Quản lí bác sĩ</li>
+                                </ul>
                             </nav>
                         </div>
                         <!--end col-->
-                    </div>
-                    <!--end row-->
 
-                    <div class="row">
-                        <div class="col-12 mt-4">
-                            <div class="table-responsive shadow rounded">
-                                <table class="table table-center bg-white mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th class="border-bottom py-3" style="min-width: 50px;">#</th>
-                                            <th class="border-bottom py-3" style="min-width: 150px;">Họ và tên</th>
-                                            <th class="border-bottom py-3" style="min-width: 100px;">Số điện thoại</th>
-                                            <th class="border-bottom py-3" style="min-width: 250px;text-align: left;">Địa chỉ</th>
-                                            <th class="border-bottom py-3">Email</th>
-                                            <th class="border-bottom py-3">Giới tính</th>
-                                            <th class="border-bottom py-3">Tuổi</th>
-
-                                            <!-- <th class="border-bottom py-3" style="min-width: 150px;">Dịch vụ</th> -->
-                                            <th class="border-bottom py-3"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th>1</th>
-                                            <td class="py-3">
-                                                <a href="#" class="text-dark">
-                                                    <div class="d-flex align-items-center">
-                                                        <img src="images/ava.png" class="avatar avatar-md-sm rounded-circle shadow" alt="">
-                                                        <span class="ms-2">Thanh Hiệp</span>
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td>0398884156</td>
-                                            <td>321 Lê Văn Việt, p.9, TP.Thủ Đức</td>
-                                            <td>thanhhiep@gmail.com</td>
-                                            <td>Nam</td>
-                                            <td>21</td>
-                                            <!-- <td>Bọc răng sứ</td> -->
-                                            <td class="text-end">
-                                                <a href="#" class="btn btn-icon btn-pills btn-soft-primary" data-bs-toggle="modal" data-bs-target="#viewappointment"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                <!-- <a href="#" class="btn btn-icon btn-pills btn-soft-success" data-bs-toggle="modal" data-bs-target="#acceptappointment"><i class="fa fa-check" aria-hidden="true"></i></a> -->
-                                                <a href="#" class="btn btn-icon btn-pills btn-soft-danger" data-bs-toggle="modal" data-bs-target="#cancelappointment"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>2</th>
-                                            <td class="py-3">
-                                                <a href="#" class="text-dark">
-                                                    <div class="d-flex align-items-center">
-                                                        <img src="images/ava.png" class="avatar avatar-md-sm rounded-circle shadow" alt="">
-                                                        <span class="ms-2">Thanh Long</span>
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td>0358999914</td>
-                                            <td>321 Phan Xích Long, p.2, q.Phú Nhuận</td>
-                                            <td>thanhlong@gmail.com</td>
-                                            <td>Nam</td>
-                                            <td>21</td>
-
-                                            <!-- <td>Nhổ răng khôn</td> -->
-                                            <td class="text-end">
-                                                <a href="#" class="btn btn-icon btn-pills btn-soft-primary" data-bs-toggle="modal" data-bs-target="#viewappointment"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                <!-- <a href="#" class="btn btn-icon btn-pills btn-soft-success" data-bs-toggle="modal" data-bs-target="#acceptappointment"><i class="fa fa-check" aria-hidden="true"></i></a> -->
-                                                <a href="#" class="btn btn-icon btn-pills btn-soft-danger" data-bs-toggle="modal" data-bs-target="#cancelappointment"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                            </td>
-                                        </tr>
-
-
-
-                                    </tbody>
-                                </table>
+                        <div class="inline" style="margin-left: 850px">
+                            <div class="justify-content-md-end">
+                                <form>
+                                    <div class="col-xl-3 col-md-6 mt-4 mt-md-0 text-md-end">
+                                        <a href="add-doctor.html" class="btn btn-primary">Thêm bác sĩ</a>
+                                    </div>
+                                    <!--end col-->
+                                </form>
+                                <!--end form-->
                             </div>
                         </div>
-                    </div>
-                    <!--end row-->
+                        <!--end row-->
 
-                    <div class="row text-center">
-                        <div class="col-12 mt-4">
-                            <ul class="pagination justify-content-end mb-0 list-unstyled">
-                                <li><a href="#" class="pe-3 ps-3 pt-2 pb-2 border"> Prev</a></li>
-                                <li class="active"><a href="#" class="pe-3 ps-3 pt-2 pb-2 border">1</a></li>
-                                <li><a href="#" class="pe-3 ps-3 pt-2 pb-2 border">2</a></li>
-                                <li><a href="#" class="pe-3 ps-3 pt-2 pb-2 border">Next </a></li>
-                            </ul>
-                            <!--end pagination-->
+                        <div class="row">
+                            <div class="col-12 mt-4">
+                                <div class="table-responsive shadow rounded">
+                                    <table class="table table-center bg-white mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-bottom py-3" style="min-width: 50px;">#</th>
+                                                <th class="border-bottom py-3" style="min-width: 150px;">Họ và tên</th>
+                                                <th class="border-bottom py-3" style="min-width: 100px;">Số điện thoại
+                                                </th>
+                                                <th class="border-bottom py-3"
+                                                    style="min-width: 250px;text-align: left;">Địa chỉ</th>
+                                                <th class="border-bottom py-3">Email</th>
+                                                <th class="border-bottom py-3">Giới tính</th>
+
+                                                <!-- <th class="border-bottom py-3" style="min-width: 150px;">Dịch vụ</th> -->
+                                                <th class="border-bottom py-3"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <td class="py-3">
+                                                    <a href="#" class="text-dark">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/ava.png"
+                                                                class="avatar avatar-md-sm rounded-circle shadow"
+                                                                alt="">
+                                                            <span class="ms-2">Nguyễn Thanh Hiệp</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>0398884156</td>
+                                                <td>321 Lê Văn Việt, p.9, TP.Thủ Đức</td>
+                                                <td>thanhhiep@gmail.com</td>
+                                                <td>Nam</td>
+                                                <!-- <td>Bọc răng sứ</td> -->
+                                                <td class="text-end">
+                                                    <a href="update_doctor.html" class="btn btn-icon btn-pills btn-soft-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                    <!-- <a href="#" class="btn btn-icon btn-pills btn-soft-success" data-bs-toggle="modal" data-bs-target="#acceptappointment"><i class="fa fa-check" aria-hidden="true"></i></a> -->
+                                                    <a href="#" class="btn btn-icon btn-pills btn-soft-danger"
+                                                        data-bs-toggle="modal" data-bs-target="#cancelappointment"><i
+                                                            class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>2</th>
+                                                <td class="py-3">
+                                                    <a href="#" class="text-dark">
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="images/ava.png"
+                                                                class="avatar avatar-md-sm rounded-circle shadow"
+                                                                alt="">
+                                                            <span class="ms-2">Phạm Minh Tân</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>0358999914</td>
+                                                <td>321 Phan Xích Long, p.2, q.Phú Nhuận</td>
+                                                <td>thanhlong@gmail.com</td>
+                                                <td>Nam</td>
+
+                                                <!-- <td>Nhổ răng khôn</td> -->
+                                                <td class="text-end">
+                                                    <a href="update_doctor.html" class="btn btn-icon btn-pills btn-soft-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                    <!-- <a href="#" class="btn btn-icon btn-pills btn-soft-success" data-bs-toggle="modal" data-bs-target="#acceptappointment"><i class="fa fa-check" aria-hidden="true"></i></a> -->
+                                                    <a href="#" class="btn btn-icon btn-pills btn-soft-danger"
+                                                        data-bs-toggle="modal" data-bs-target="#cancelappointment"><i
+                                                            class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                </td>
+                                            </tr>
+
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                        <!--end col-->
+                        <!--end row-->
+
+                        <div class="row text-center">
+                            <div class="col-12 mt-4">
+                                <ul class="pagination justify-content-end mb-0 list-unstyled">
+                                    <li><a href="#" class="pe-3 ps-3 pt-2 pb-2 border"> Prev</a></li>
+                                    <li class="active"><a href="#" class="pe-3 ps-3 pt-2 pb-2 border">1</a></li>
+                                    <li><a href="#" class="pe-3 ps-3 pt-2 pb-2 border">2</a></li>
+                                    <li><a href="#" class="pe-3 ps-3 pt-2 pb-2 border">Next </a></li>
+                                </ul>
+                                <!--end pagination-->
+                            </div>
+                            <!--end col-->
+                        </div>
+                        <!--end row-->
                     </div>
-                    <!--end row-->
                 </div>
-            </div>
-            <!--end container-->
+                <!--end container-->
 
-            <!-- Footer Start -->
+                <!-- Footer Start -->
 
-            <!-- End -->
+                <!-- End -->
         </main>
         <!--End page-content" -->
     </div>
     <!-- page-wrapper -->
 
     <!-- Modal start -->
-    <!-- View Appintment Start -->
-    <div class="modal fade" id="viewappointment" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-bottom p-3">
-                    <h5 class="modal-title" id="exampleModalLabel1">Chi tiết cuộc hẹn</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-3 pt-4">
-                    <div class="d-flex align-items-center">
-                        <img src="images/ava.png" class="avatar avatar-small rounded-pill" alt="">
-                        <h5 class="mb-0 ms-3">Thanh Hiệp</h5>
-                    </div>
-                    <ul class="list-unstyled mb-0 d-md-flex justify-content-between mt-4">
-                        <li>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-flex">
-                                    <h6>Email:</h6>
-                                    <p class="text-muted ms-2">ThanhHiep@gmail.com</p>
-                                </li>
-
-                                <li class="d-flex">
-                                    <h6>Ngày hẹn:</h6>
-                                    <p class="text-muted ms-2">15/07/2021</p>
-                                </li>
-
-                                <li class="d-flex">
-                                    <h6>Giờ hẹn:</h6>
-                                    <p class="text-muted ms-2">11:00</p>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <ul class="list-unstyled mb-0">
-
-                                <li class="d-flex">
-                                    <h6>Số điện thoại:</h6>
-                                    <p class="text-muted ms-2">0398874156</p>
-                                </li>
-
-                                <li class="d-flex">
-                                    <h6>Dịch vụ:</h6>
-                                    <p class="text-muted ms-2">Niềng răng thẩm mỹ</p>
-                                </li>
-
-                                <li class="d-flex">
-                                    <h6>Giá tiền:</h6>
-                                    <p class="text-muted ms-2">18.000.000 VND</p>
-                                </li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- View Appintment End -->
-
-    <!-- Accept Cuộc hẹn Start -->
-    <div class="modal fade" id="acceptappointment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-bottom p-3">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body py-5">
-                    <div class="text-center">
-                        <div class="icon d-flex align-items-center justify-content-center bg-soft-success rounded-circle mx-auto" style="height: 95px; width:95px;">
-                            <i class="fa fa-check h1 mb-0"></i>
-                        </div>
-                        <div class="mt-4">
-                            <h4>Chấp nhận lịch hẹn</h4>
-
-                            <div class="mt-4">
-                                <a href="doctor.html" class="btn btn-soft-success">Chấp thuận</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Accept Cuộc hẹn End -->
-
-    <!-- Cancel Cuộc hẹn Start -->
+    <!-- Xóa bác sĩ Start -->
     <div class="modal fade" id="cancelappointment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -335,16 +269,18 @@
                 </div>
                 <div class="modal-body py-5">
                     <div class="text-center">
-                        <div class="icon d-flex align-items-center justify-content-center bg-soft-danger rounded-circle mx-auto" style="height: 95px; width:95px;">
-                            <i class="fa fa-ban h1 mb-0"></i>
+                        <div class="icon d-flex align-items-center justify-content-center bg-soft-danger rounded-circle mx-auto"
+                            style="height: 95px; width:95px;">
+                            <i class="fa fa-trash-o fa-3x"></i>
                         </div>
                         <div class="mt-4">
-                            <h4>Từ chối lịch hẹn</h4>
+                            <h4>Lí do</h4>
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Hãy cho khách hàng biết lí do bạn từ chối lịch hẹn" rows="3"></textarea>
+                                <textarea class="form-control" placeholder="Hãy cho biết lí do bạn xóa bác sĩ này"
+                                    rows="3"></textarea>
                             </div>
                             <div class="mt-4">
-                                <a href="#" class="btn btn-soft-danger">Gửi</a>
+                                <a href="#" class="btn btn-soft-danger">Xác nhận</a>
                             </div>
                         </div>
                     </div>
@@ -352,7 +288,7 @@
             </div>
         </div>
     </div>
-    <!-- Cancel Cuộc hẹn End -->
+    <!-- Xóa bác sĩ End -->
     <!-- Modal end -->
 
     <!-- javascript -->
