@@ -154,6 +154,9 @@
         .inline p {
             display: inline-block;
         }
+        td {
+    border: none;
+}
     </style>
 </head>
 
@@ -447,6 +450,7 @@
                         <th scope="col">Giá</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -518,8 +522,12 @@
                             </button></td>
                             <td> <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#modalAddDiscount2">
-                                Thêm ưu đãi
+                                Xem ưu đãi
                             </button></td>
+                            <td>
+                                <a href="" class="btn btn-danger"
+                        onclick="return confirm('Bạn có muốn xóa nha khoa này không?');">Xóa ưu đãi</a>
+                            </td>
 
                         <!-- Modal start -->
                         <div class="modal fade" id="modalUpdateService2" tabindex="-1" role="dialog"
